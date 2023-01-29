@@ -275,7 +275,7 @@ namespace ROP
             this.loadFile.TabIndex = 16;
             this.loadFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.loadFile.UseVisualStyleBackColor = false;
-            this.loadFile.Click += new System.EventHandler(this.loadFile_Click);
+            this.loadFile.Click += new System.EventHandler(this.LoadFile_Click);
             // 
             // openFileDialog1
             // 
@@ -290,7 +290,7 @@ namespace ROP
             this.saveFile.Size = new System.Drawing.Size(40, 32);
             this.saveFile.TabIndex = 17;
             this.saveFile.UseVisualStyleBackColor = false;
-            this.saveFile.Click += new System.EventHandler(this.saveFile_Click);
+            this.saveFile.Click += new System.EventHandler(this.SaveFile_Click);
             // 
             // MainForm
             // 

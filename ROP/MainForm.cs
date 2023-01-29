@@ -24,18 +24,20 @@ namespace ROP
 
 
         private Rotor rr, rm, rl, reflector;
+
+        // vytvoření všech rotorů
         void MainFormLoad(object sender, System.EventArgs e)
         {
             rr = new Rotor("BDFHJLCPRTXVZNYEIWGAKMUSQO", lblRotor1, 'V');
             rm = new Rotor("AJDKSIRUXBLHWTMCQGZNPYFVOE", lblRotor2, 'E');
             rl = new Rotor("EKMFLGDQVZNTOWYHXUSPAIBRCJ", lblRotor3, 'Q');
             reflector = new Rotor("YRUHQSLDPXNGOKMIEBFZCWVJAT", null, '\0');
-            rr.SetNextRotor(rm);
-            rm.SetNextRotor(rl);
-            rl.SetNextRotor(reflector);
-            rm.SetPreviousRotor(rr);
-            rl.SetPreviousRotor(rm);
-            reflector.SetPreviousRotor(rl);
+            rr.SetNext(rm);
+            rm.SetNext(rl);
+            rl.SetNext(reflector);
+            rm.SetPrevious(rr);
+            rl.SetPrevious(rm);
+            reflector.SetPrevious(rl);
 
         }
 
@@ -61,7 +63,7 @@ namespace ROP
             }
         }
 
-        //přesuňte první (pravý) rotor nahoru
+        //přesune první (pravý) rotor nahoru
         void BtnRotor1UpClick(object sender, System.EventArgs e)
         {
             rr.Move();
@@ -85,19 +87,19 @@ namespace ROP
             rm.MoveBack();
         }
 
-        //přesuňte třetí (levý) rotor nahoru
+        //přesune třetí (levý) rotor nahoru
         void BtnRotor3UpClick(object sender, System.EventArgs e)
         {
             rl.Move();
         }
 
-        //přesuňte třetí rotor dolů
+        //přesune třetí rotor dolů
         void BtnRotor3DownClick(object sender, System.EventArgs e)
         {
             rl.MoveBack();
         }
 
-        //zašifrujte data v horním textovém poli a výsledek vložte do dolního pole.
+        //zašifruje data v horním textovém poli a výsledek vloží do dolního textboxu.
         void Button1Click(object sender, System.EventArgs e)
         {
             //HDXCONVRWUEUVEZWDXDFCHXGO
@@ -134,12 +136,12 @@ namespace ROP
             rm.ResetOffset();
             rl.ResetOffset();
 
-            rr.SetNextRotor(rm);
-            rm.SetNextRotor(rl);
-            rl.SetNextRotor(reflector);
-            rm.SetPreviousRotor(rr);
-            rl.SetPreviousRotor(rm);
-            reflector.SetPreviousRotor(rl);
+            rr.SetNext(rm);
+            rm.SetNext(rl);
+            rl.SetNext(reflector);
+            rm.SetPrevious(rr);
+            rl.SetPrevious(rm);
+            reflector.SetPrevious(rl);
 
             lblRotor1.Text = "A";
             lblRotor2.Text = "A";
@@ -150,18 +152,18 @@ namespace ROP
         public void SetReflector(string refl)
         {
             reflector = new Rotor(refl, null, '\0');
-            reflector.SetPreviousRotor(rl);
-            rl.SetNextRotor(reflector);
+            reflector.SetPrevious(rl);
+            rl.SetNext(reflector);
         }
 
         //získat vybraný reflektor
         public string GetReflector()
         {
-            return reflector.GetLayout();
+            return reflector.Layout();
         }
         
         //otevřít soubour zašifrovat/dešifrovat
-        private void loadFile_Click(object sender, System.EventArgs e)
+        private void LoadFile_Click(object sender, System.EventArgs e)
         {
              using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -178,7 +180,7 @@ namespace ROP
                     txtFinal.Text = "";
                     for (int i = 0; i < chIn.Length; i++)
                     {
-                        if (chIn[i] >= 65 && chIn[i] <= 90)
+                        if (chIn[i] >= 'A' && chIn[i] <= 90)
                         {
                             rr.Move();
                             rr.PutDataIn(chIn[i]);
@@ -188,7 +190,7 @@ namespace ROP
                 }
         }
         //uložit výsledný text do souboru
-        private void saveFile_Click(object sender, EventArgs e)
+        private void SaveFile_Click(object sender, EventArgs e)
         {
             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
@@ -203,15 +205,15 @@ namespace ROP
 
         public string GetRightRotor()
         {
-            return rr.GetLayout();
+            return rr.Layout();
         }
         public string GetMiddleRotor()
         {
-            return rm.GetLayout();
+            return rm.Layout();
         }
         public string GetLeftRotor()
         {
-            return rl.GetLayout();
+            return rl.Layout();
         }
     }
 }

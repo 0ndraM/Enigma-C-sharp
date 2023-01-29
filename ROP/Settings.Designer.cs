@@ -204,6 +204,7 @@ namespace ROP
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.lstAvailableRotors);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Settings";
