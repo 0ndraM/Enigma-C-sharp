@@ -180,7 +180,7 @@ namespace ROP
                     txtFinal.Text = "";
                     for (int i = 0; i < chIn.Length; i++)
                     {
-                        if (chIn[i] >= 'A' && chIn[i] <= 90)
+                        if (chIn[i] >= 'A' && chIn[i] <= 'Z')
                         {
                             rr.Move();
                             rr.PutDataIn(chIn[i]);
@@ -192,17 +192,16 @@ namespace ROP
         //uložit výsledný text do souboru
         private void SaveFile_Click(object sender, EventArgs e)
         {
-            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+             using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                FileStream fs2 = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write);
-                StreamWriter sw = new StreamWriter(fs2, Encoding.UTF8);
-                sw.Write(txtFinal.Text);
-                sw.Close();
-                fs2.Close();
+                  FileStream fs2 = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write);
+                  StreamWriter sw = new StreamWriter(fs2, Encoding.UTF8);
+                  sw.Write(txtFinal.Text);
+                  sw.Close();
+                  fs2.Close();
                 }
         }
-
         public string GetRightRotor()
         {
             return rr.Layout();
@@ -217,4 +216,3 @@ namespace ROP
         }
     }
 }
-
