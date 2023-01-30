@@ -27,11 +27,13 @@ namespace ROP
 
         public MainForm MainForm { get; }
 
+        //zavření nastavení
         void BtnCancelClick(object sender, System.EventArgs e)
         {
             Close();
         }
 
+        // vytvoření všech rotorú
         void SettingsLoad(object sender, System.EventArgs e)
         {
             al1 = new ArrayList();
@@ -105,6 +107,13 @@ namespace ROP
             }
         }
 
+        //nabídka reflektorů
+        private void cmbReflector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        //změna pořadí vybraných rotorů
         void LstAvailableRotorsSelectedIndexChanged(object sender, System.EventArgs e)
         {
             if (lstAvailableRotors.SelectedIndex < 0)
@@ -121,7 +130,8 @@ namespace ROP
             }
             lblRotorStructure.Text = "";
         }
-
+        
+        //přídámí rotoru do vybraných
         void BtnSelectClick(object sender, System.EventArgs e)
         {
             if (lstAvailableRotors.SelectedIndex < 0)
@@ -134,6 +144,7 @@ namespace ROP
             lblRotorStructure.Text = "";
         }
 
+        //odebrání rotoru z vybraných
         void BtnDeselectClick(object sender, System.EventArgs e)
         {
             if (lstSelectedRotors.SelectedIndex < 0)
@@ -145,6 +156,7 @@ namespace ROP
             lstSelectedRotors.Items.Remove(lstSelectedRotors.SelectedItem);
         }
 
+        //posunutí ozoru na hornější pozici
         void BtnUpClick(object sender, System.EventArgs e)
         {
             if (lstSelectedRotors.SelectedIndex <= 0)
@@ -159,6 +171,7 @@ namespace ROP
 
         }
 
+        //posunutí rotoru na nižší pozici
         void BtnDownClick(object sender, System.EventArgs e)
         {
             if (lstSelectedRotors.SelectedIndex < 0 || lstSelectedRotors.SelectedIndex == lstSelectedRotors.Items.Count - 1)
@@ -172,6 +185,7 @@ namespace ROP
             lstSelectedRotors.SelectedIndex++;
         }
 
+        //uložení nastavení
         void BtnOkClick(object sender, System.EventArgs e)
         {
             if (lstSelectedRotors.Items.Count != 3)
@@ -208,11 +222,12 @@ namespace ROP
                             alRotName[2].ToString(),
                             alRotNotch[2].ToString().ToCharArray()[0]);
 
+            //změna reflektoru
             if (cmbReflector.SelectedIndex >= 0)
             {
                 mf.SetReflector(cmbReflector.SelectedItem.ToString().Substring(cmbReflector.SelectedItem.ToString().LastIndexOf("=") + 2).Trim());
             }
-            //MessageBox.Show("\""+mf.GetReflector()+"\"");
+            MessageBox.Show("\""+mf.GetReflector()+"\"");
             Close();
 
         }

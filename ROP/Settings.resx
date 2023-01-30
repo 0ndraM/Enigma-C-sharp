@@ -447,6 +447,21 @@
   <data name="&gt;&gt;cmbReflector.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="lblRotorStructure.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 15world, style=Bold</value>
+  </data>
+  <data name="lblRotorStructure.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 39</value>
+  </data>
+  <data name="lblRotorStructure.Size" type="System.Drawing.Size, System.Drawing">
+    <value>296, 21</value>
+  </data>
+  <data name="lblRotorStructure.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lblRotorStructure.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
   <data name="&gt;&gt;lblRotorStructure.Name" xml:space="preserve">
     <value>lblRotorStructure</value>
   </data>
@@ -482,33 +497,6 @@
   </data>
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="lblRotorStructure.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Tahoma, 15world, style=Bold</value>
-  </data>
-  <data name="lblRotorStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 39</value>
-  </data>
-  <data name="lblRotorStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>296, 21</value>
-  </data>
-  <data name="lblRotorStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="lblRotorStructure.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="&gt;&gt;lblRotorStructure.Name" xml:space="preserve">
-    <value>lblRotorStructure</value>
-  </data>
-  <data name="&gt;&gt;lblRotorStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblRotorStructure.Parent" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;lblRotorStructure.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="btnCancel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
