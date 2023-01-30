@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ROP
@@ -90,10 +91,14 @@ namespace ROP
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(72, 7);
+            this.label1.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(82, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 30);
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(107, 30);
             this.label1.TabIndex = 0;
+            this.label1.Text = "ENIGMA";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // About
             // 

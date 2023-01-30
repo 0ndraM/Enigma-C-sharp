@@ -45,8 +45,8 @@ namespace ROP
             this.lblRotor3 = new System.Windows.Forms.Label();
             this.btnRotor2Down = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblRotorS = new System.Windows.Forms.Label();
-            this.lblRotorD = new System.Windows.Forms.Label();
+            this.lblRotorL = new System.Windows.Forms.Label();
+            this.lblRotorR = new System.Windows.Forms.Label();
             this.btnRotor1Down = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@ namespace ROP
             this.btnAbout.Size = new System.Drawing.Size(40, 32);
             this.btnAbout.TabIndex = 11;
             this.btnAbout.UseVisualStyleBackColor = false;
-            this.btnAbout.Click += new System.EventHandler(this.BtnDespreClick);
+            this.btnAbout.Click += new System.EventHandler(this.BtnAboutClick);
             // 
             // btnRotor3Down
             // 
@@ -190,9 +190,9 @@ namespace ROP
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBox1.Controls.Add(this.lblRotorS);
+            this.groupBox1.Controls.Add(this.lblRotorL);
             this.groupBox1.Controls.Add(this.lblRotorM);
-            this.groupBox1.Controls.Add(this.lblRotorD);
+            this.groupBox1.Controls.Add(this.lblRotorR);
             this.groupBox1.Controls.Add(this.btnRotor1Down);
             this.groupBox1.Controls.Add(this.btnRotor2Down);
             this.groupBox1.Controls.Add(this.btnRotor1Up);
@@ -209,25 +209,25 @@ namespace ROP
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Rotory";
             // 
-            // lblRotorS
+            // lblRotorL
             // 
-            this.lblRotorS.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
-            this.lblRotorS.Location = new System.Drawing.Point(16, 16);
-            this.lblRotorS.Name = "lblRotorS";
-            this.lblRotorS.Size = new System.Drawing.Size(32, 24);
-            this.lblRotorS.TabIndex = 20;
-            this.lblRotorS.Text = "I";
-            this.lblRotorS.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRotorL.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
+            this.lblRotorL.Location = new System.Drawing.Point(16, 16);
+            this.lblRotorL.Name = "lblRotorL";
+            this.lblRotorL.Size = new System.Drawing.Size(32, 24);
+            this.lblRotorL.TabIndex = 20;
+            this.lblRotorL.Text = "I";
+            this.lblRotorL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblRotorD
+            // lblRotorR
             // 
-            this.lblRotorD.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
-            this.lblRotorD.Location = new System.Drawing.Point(96, 16);
-            this.lblRotorD.Name = "lblRotorD";
-            this.lblRotorD.Size = new System.Drawing.Size(32, 24);
-            this.lblRotorD.TabIndex = 18;
-            this.lblRotorD.Text = "III";
-            this.lblRotorD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblRotorR.Font = new System.Drawing.Font("Tahoma", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World);
+            this.lblRotorR.Location = new System.Drawing.Point(96, 16);
+            this.lblRotorR.Name = "lblRotorR";
+            this.lblRotorR.Size = new System.Drawing.Size(32, 24);
+            this.lblRotorR.TabIndex = 18;
+            this.lblRotorR.Text = "III";
+            this.lblRotorR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnRotor1Down
             // 
@@ -336,8 +336,8 @@ namespace ROP
         private Label lblRotor3;
         private Button btnRotor2Down;
         private GroupBox groupBox1;
-        private Label lblRotorS;
-        private Label lblRotorD;
+        private Label lblRotorL;
+        private Label lblRotorR;
         private Button btnRotor1Down;
         private Button btnSettings;
         private Button loadFile;

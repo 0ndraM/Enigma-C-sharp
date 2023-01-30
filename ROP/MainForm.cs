@@ -41,7 +41,7 @@ namespace ROP
 
         }
 
-        void BtnDespreClick(object sender, System.EventArgs e)
+        void BtnAboutClick(object sender, System.EventArgs e)
         {
             About a = new About();
             a.ShowDialog();
@@ -103,14 +103,14 @@ namespace ROP
         void Button1Click(object sender, System.EventArgs e)
         {
             //HDXCONVRWUEUVEZWDXDFCHXGO
-            char[] chIn = txtInit.Text.ToUpper().ToCharArray();
+            char[] charIn = txtInit.Text.ToUpper().ToCharArray();
             txtFinal.Text = "";
-            for (int i = 0; i < chIn.Length; i++)
+            for (int i = 0; i < charIn.Length; i++)
             {
-                if (chIn[i] >= 65 && chIn[i] <= 90)
+                if (charIn[i] >= 65 && charIn[i] <= 90)
                 {
                     rr.Move();
-                    rr.PutDataIn(chIn[i]);
+                    rr.PutDataIn(charIn[i]);
                     txtFinal.AppendText("" + rr.GetDataOut());
                 }
             }
@@ -121,9 +121,9 @@ namespace ROP
                                  string rot2, string rotName2, char rotNotch2,
                                  string rot3, string rotName3, char rotNotch3)
         {
-            lblRotorS.Text = rotName1;
+            lblRotorL.Text = rotName1;
             lblRotorM.Text = rotName2;
-            lblRotorD.Text = rotName3;
+            lblRotorR.Text = rotName3;
             rr = null;
             rm = null;
             rl = null;

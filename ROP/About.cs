@@ -17,7 +17,7 @@ namespace ROP
             InitializeComponent();
         }
 
-
+        // zavřít
         private void BtnOkClick(object sender, EventArgs e)
         {
             Close();
