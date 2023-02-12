@@ -316,7 +316,7 @@ namespace ROP
             this.ResumeLayout(false);
             this.PerformLayout();
 
-            }
+        }
 
 
         #endregion
@@ -345,4 +345,3 @@ namespace ROP
         private Button saveFile;
     }
 }
-

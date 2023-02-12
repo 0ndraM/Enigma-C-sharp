@@ -156,6 +156,7 @@ namespace ROP
             offset--;
 
             lbl.Text = "" + ((char)(65 + offset));
+
         }
 
         /// <summary>

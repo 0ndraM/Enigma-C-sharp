@@ -38,7 +38,7 @@ namespace ROP
             rm.SetPrevious(rr);
             rl.SetPrevious(rm);
             reflector.SetPrevious(rl);
-
+ 
         }
 
         void BtnAboutClick(object sender, System.EventArgs e)
@@ -52,7 +52,7 @@ namespace ROP
             Settings s = new Settings(this);
             s.ShowDialog();
         }
-        // posun "grafickěho" rotoru
+        // zašifrování písmeno po zapsání
         void TxtInitKeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if ((e.KeyValue >= 65 && e.KeyValue <= 90) && !e.Control)
@@ -60,6 +60,7 @@ namespace ROP
                 rr.Move();
                 rr.PutDataIn((char)e.KeyValue);
                 txtFinal.AppendText("" + rr.GetDataOut());
+                
             }
         }
 
