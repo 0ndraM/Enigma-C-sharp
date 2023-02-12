@@ -227,8 +227,12 @@ namespace ROP
             {
                 mf.SetReflector(cmbReflector.SelectedItem.ToString().Substring(cmbReflector.SelectedItem.ToString().LastIndexOf("=") + 2).Trim());
             }
+<<<<<<< HEAD
             
             //MessageBox.Show("\""+mf.GetReflector()+"\""); //test
+=======
+            //MessageBox.Show("\""+mf.GetReflector()+"\"");
+>>>>>>> 9ea943f1fede4a6baf9efd3794f75d50e6483a24
             Close();
 
         }
