@@ -156,6 +156,7 @@ namespace ROP
             lstSelectedRotors.Items.Remove(lstSelectedRotors.SelectedItem);
         }
 
+        //posunutí rotoru na hornější pozici
         void BtnUpClick(object sender, System.EventArgs e)
         {
             if (lstSelectedRotors.SelectedIndex <= 0)
@@ -228,10 +229,6 @@ namespace ROP
             }
             
             //MessageBox.Show("\""+mf.GetReflector()+"\""); //test
-<<<<<<< HEAD
-=======
-
->>>>>>> 587c06d76dd3973e489fbb4866e7f46656fa262c
             Close();
 
         }
