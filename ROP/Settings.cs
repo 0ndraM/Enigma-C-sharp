@@ -64,6 +64,7 @@ namespace ROP
             {
                 lstAvailableRotors.Items.Add(al1[i]);
             }
+            //nastavení nápověd k šipkám
             ttSelect.SetToolTip(btnSelect, "Výběr rotoru");
             ttDeselect.SetToolTip(btnDeselect, "Zrušení výběru rotoru");
             ttUp.SetToolTip(btnUp, "Posuňte rotor nahoru");
