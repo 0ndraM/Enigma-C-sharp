@@ -22,7 +22,7 @@ namespace ROP
         private string rotor1, rotor2, rotor3, rotor4, rotor5;
         public MainForm mf;
         private ArrayList al1, al2, al3;
-        
+       
 
 
         public MainForm MainForm { get; }
