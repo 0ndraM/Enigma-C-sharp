@@ -50,9 +50,9 @@ namespace ROP
             this.btnRotor1Down = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.loadFile = new System.Windows.Forms.Button();
+            this.btnLoadFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.saveFile = new System.Windows.Forms.Button();
+            this.btnSaveFile = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -265,40 +265,40 @@ namespace ROP
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1Click);
             // 
-            // loadFile
+            // btnLoadFile
             // 
-            this.loadFile.BackColor = System.Drawing.SystemColors.Window;
-            this.loadFile.Image = ((System.Drawing.Image)(resources.GetObject("loadFile.Image")));
-            this.loadFile.Location = new System.Drawing.Point(102, 262);
-            this.loadFile.Name = "loadFile";
-            this.loadFile.Size = new System.Drawing.Size(40, 32);
-            this.loadFile.TabIndex = 16;
-            this.loadFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.loadFile.UseVisualStyleBackColor = false;
-            this.loadFile.Click += new System.EventHandler(this.LoadFile_Click);
+            this.btnLoadFile.BackColor = System.Drawing.SystemColors.Window;
+            this.btnLoadFile.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadFile.Image")));
+            this.btnLoadFile.Location = new System.Drawing.Point(102, 262);
+            this.btnLoadFile.Name = "btnLoadFile";
+            this.btnLoadFile.Size = new System.Drawing.Size(40, 32);
+            this.btnLoadFile.TabIndex = 16;
+            this.btnLoadFile.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLoadFile.UseVisualStyleBackColor = false;
+            this.btnLoadFile.Click += new System.EventHandler(this.BtnLoadFile_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // saveFile
+            // btnSaveFile
             // 
-            this.saveFile.BackColor = System.Drawing.SystemColors.Window;
-            this.saveFile.Image = ((System.Drawing.Image)(resources.GetObject("saveFile.Image")));
-            this.saveFile.Location = new System.Drawing.Point(148, 262);
-            this.saveFile.Name = "saveFile";
-            this.saveFile.Size = new System.Drawing.Size(40, 32);
-            this.saveFile.TabIndex = 17;
-            this.saveFile.UseVisualStyleBackColor = false;
-            this.saveFile.Click += new System.EventHandler(this.SaveFile_Click);
+            this.btnSaveFile.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSaveFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveFile.Image")));
+            this.btnSaveFile.Location = new System.Drawing.Point(148, 262);
+            this.btnSaveFile.Name = "btnSaveFile";
+            this.btnSaveFile.Size = new System.Drawing.Size(40, 32);
+            this.btnSaveFile.TabIndex = 17;
+            this.btnSaveFile.UseVisualStyleBackColor = false;
+            this.btnSaveFile.Click += new System.EventHandler(this.BtnSaveFile_Click);
             // 
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(380, 400);
-            this.Controls.Add(this.saveFile);
-            this.Controls.Add(this.loadFile);
+            this.Controls.Add(this.btnSaveFile);
+            this.Controls.Add(this.btnLoadFile);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSettings);
@@ -340,8 +340,8 @@ namespace ROP
         private Label lblRotorR;
         private Button btnRotor1Down;
         private Button btnSettings;
-        private Button loadFile;
+        private Button btnLoadFile;
         private OpenFileDialog openFileDialog1;
-        private Button saveFile;
+        private Button btnSaveFile;
     }
 }

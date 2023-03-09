@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace ROP
 {
@@ -38,7 +38,16 @@ namespace ROP
             rm.SetPrevious(rr);
             rl.SetPrevious(rm);
             reflector.SetPrevious(rl);
- 
+
+            //nastavení nápověd 
+            ToolTip ttSettings = new ToolTip();
+            ttSettings.SetToolTip(btnSettings, "Nastavení");
+            ToolTip ttAbout = new ToolTip();
+            ttAbout.SetToolTip(btnAbout, "Informace");
+            ToolTip ttLoadFile = new ToolTip();
+            ttLoadFile.SetToolTip(btnLoadFile, "Nahrání ze souboru");
+            ToolTip ttSaveFile = new ToolTip();
+            ttSaveFile.SetToolTip(btnSaveFile, "Uložení do souboru");
         }
 
         void BtnAboutClick(object sender, System.EventArgs e)
@@ -164,7 +173,7 @@ namespace ROP
         }
         
         //otevřít soubour zašifrovat/dešifrovat
-        private void LoadFile_Click(object sender, System.EventArgs e)
+        private void BtnLoadFile_Click(object sender, System.EventArgs e)
         {
              using (OpenFileDialog openFileDialog = new OpenFileDialog())
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -191,7 +200,7 @@ namespace ROP
                 }
         }
         //uložit výsledný text do souboru
-        private void SaveFile_Click(object sender, EventArgs e)
+        private void BtnSaveFile_Click(object sender, EventArgs e)
         {
              using (SaveFileDialog saveFileDialog = new SaveFileDialog())
                 if (saveFileDialog.ShowDialog() == DialogResult.OK)
