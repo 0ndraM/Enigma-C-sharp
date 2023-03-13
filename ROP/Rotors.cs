@@ -23,7 +23,7 @@ namespace ROP
         /// Konstruktor pro vytvoření nového rotoru
         /// </summary>
         /// <param name="layout">Uspořádání rotoru</param>
-        /// <param name="notchPos">Poloha zářezu rotoru</param>
+        /// <param name="notchPos">Poloha zarážky rotoru</param>
         public Rotor(string layout, Label lbl, char notchPos)
         {
             this.layout = layout;
@@ -91,7 +91,7 @@ namespace ROP
         }
 
         // <summary>
-        /// Vlastnost pro získání polohy zářezu rotoru
+        /// Vlastnost pro získání polohy zarážky rotoru
         /// </summary>
         public char GetNotchPos()
         {
