@@ -112,7 +112,7 @@ namespace ROP
         //zašifruje data v horním textovém poli a výsledek vloží do dolního textboxu.
         void Button1Click(object sender, System.EventArgs e)
         {
-            //HDXCONVRWUEUVEZWDXDFCHXGO
+           
             char[] charIn = txtInit.Text.ToUpper().ToCharArray();
             txtFinal.Text = "";
             for (int i = 0; i < charIn.Length; i++)
@@ -212,6 +212,15 @@ namespace ROP
                   fs2.Close();
                 }
         }
+
+        
+
+        private void BtnClear_Click(object sender, EventArgs e)
+        {
+            txtFinal.Clear();
+            txtInit.Clear();
+        }
+
         public string GetRightRotor()
         {
             return rr.Layout();

@@ -13,8 +13,9 @@ namespace ROP
         /// <summary>
         /// Třída pro implementaci funkce rotoru ve stroji Enigma
         /// </summary>
+
         protected string layout;
-        protected byte offset;
+        protected int offset;
         protected Rotor previous, next;
         protected Label lbl;
         protected char cIn = '\0', notchPos;

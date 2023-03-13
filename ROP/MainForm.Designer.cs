@@ -53,6 +53,7 @@ namespace ROP
             this.btnLoadFile = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnSaveFile = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@ namespace ROP
             // 
             this.btnAbout.BackColor = System.Drawing.SystemColors.Window;
             this.btnAbout.Image = ((System.Drawing.Image)(resources.GetObject("btnAbout.Image")));
-            this.btnAbout.Location = new System.Drawing.Point(56, 262);
+            this.btnAbout.Location = new System.Drawing.Point(64, 262);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(40, 32);
             this.btnAbout.TabIndex = 11;
@@ -244,7 +245,7 @@ namespace ROP
             // 
             this.btnSettings.BackColor = System.Drawing.SystemColors.Window;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
-            this.btnSettings.Location = new System.Drawing.Point(10, 262);
+            this.btnSettings.Location = new System.Drawing.Point(330, 12);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(40, 32);
             this.btnSettings.TabIndex = 12;
@@ -269,7 +270,7 @@ namespace ROP
             // 
             this.btnLoadFile.BackColor = System.Drawing.SystemColors.Window;
             this.btnLoadFile.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadFile.Image")));
-            this.btnLoadFile.Location = new System.Drawing.Point(102, 262);
+            this.btnLoadFile.Location = new System.Drawing.Point(110, 262);
             this.btnLoadFile.Name = "btnLoadFile";
             this.btnLoadFile.Size = new System.Drawing.Size(40, 32);
             this.btnLoadFile.TabIndex = 16;
@@ -285,18 +286,29 @@ namespace ROP
             // 
             this.btnSaveFile.BackColor = System.Drawing.SystemColors.Window;
             this.btnSaveFile.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveFile.Image")));
-            this.btnSaveFile.Location = new System.Drawing.Point(148, 262);
+            this.btnSaveFile.Location = new System.Drawing.Point(156, 262);
             this.btnSaveFile.Name = "btnSaveFile";
             this.btnSaveFile.Size = new System.Drawing.Size(40, 32);
             this.btnSaveFile.TabIndex = 17;
             this.btnSaveFile.UseVisualStyleBackColor = false;
             this.btnSaveFile.Click += new System.EventHandler(this.BtnSaveFile_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(13, 262);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(43, 32);
+            this.btnClear.TabIndex = 18;
+            this.btnClear.Text = "Smaž";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 13);
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(380, 400);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSaveFile);
             this.Controls.Add(this.btnLoadFile);
             this.Controls.Add(this.groupBox1);
@@ -343,5 +355,6 @@ namespace ROP
         private Button btnLoadFile;
         private OpenFileDialog openFileDialog1;
         private Button btnSaveFile;
+        private Button btnClear;
     }
 }
