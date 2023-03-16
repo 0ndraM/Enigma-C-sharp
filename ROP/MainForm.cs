@@ -125,53 +125,6 @@ namespace ROP
                 }
             }
         }
-
-        //metoda výměny rotorů, které se používají
-        public void ChangeRotors(string rot1, string rotName1, char rotNotch1,
-                                 string rot2, string rotName2, char rotNotch2,
-                                 string rot3, string rotName3, char rotNotch3)
-        {
-            lblRotorL.Text = rotName1;
-            lblRotorM.Text = rotName2;
-            lblRotorR.Text = rotName3;
-            rr = null;
-            rm = null;
-            rl = null;
-
-            rr = new Rotor(rot3, lblRotor1, rotNotch3);
-            rm = new Rotor(rot2, lblRotor2, rotNotch2);
-            rl = new Rotor(rot1, lblRotor3, rotNotch1);
-
-            rr.ResetOffset();
-            rm.ResetOffset();
-            rl.ResetOffset();
-
-            rr.SetNext(rm);
-            rm.SetNext(rl);
-            rl.SetNext(reflector);
-            rm.SetPrevious(rr);
-            rl.SetPrevious(rm);
-            reflector.SetPrevious(rl);
-
-            lblRotor1.Text = "A";
-            lblRotor2.Text = "A";
-            lblRotor3.Text = "A";
-        }
-
-        //výměna reflektoru
-        public void SetReflector(string refl)
-        {
-            reflector = null; 
-            reflector = new Rotor(refl, null, '\0');
-            reflector.SetPrevious(rl);
-            rl.SetNext(reflector);
-        }
-
-        //získat vybraný reflektor
-        public string GetReflector()
-        {
-            return reflector.Layout();
-        }
         
         //otevřít soubour zašifrovat/dešifrovat
         private void BtnLoadFile_Click(object sender, System.EventArgs e)
@@ -222,14 +175,63 @@ namespace ROP
             txtInit.Clear();
         }
 
+        //metoda výměny rotorů, které se používají
+        public void ChangeRotors(string rot1, string rotName1, char rotNotch1,
+                                 string rot2, string rotName2, char rotNotch2,
+                                 string rot3, string rotName3, char rotNotch3)
+        {
+            lblRotorL.Text = rotName1;
+            lblRotorM.Text = rotName2;
+            lblRotorR.Text = rotName3;
+            rr = null;
+            rm = null;
+            rl = null;
+
+            rr = new Rotor(rot3, lblRotor1, rotNotch3);
+            rm = new Rotor(rot2, lblRotor2, rotNotch2);
+            rl = new Rotor(rot1, lblRotor3, rotNotch1);
+
+            rr.ResetOffset();
+            rm.ResetOffset();
+            rl.ResetOffset();
+
+            rr.SetNext(rm);
+            rm.SetNext(rl);
+            rl.SetNext(reflector);
+            rm.SetPrevious(rr);
+            rl.SetPrevious(rm);
+            reflector.SetPrevious(rl);
+
+            lblRotor1.Text = "A";
+            lblRotor2.Text = "A";
+            lblRotor3.Text = "A";
+        }
+
+        //výměna reflektoru
+        public void SetReflector(string refl)
+        {
+            reflector = null;
+            reflector = new Rotor(refl, null, '\0');
+            reflector.SetPrevious(rl);
+            rl.SetNext(reflector);
+        }
+
+        //získat vybraný reflektor
+        public string GetReflector()
+        {
+            return reflector.Layout();
+        }
+        //získat pravý rotor
         public string GetRightRotor()
         {
             return rr.Layout();
         }
+        //získat prostřední rotor
         public string GetMiddleRotor()
         {
             return rm.Layout();
         }
+        //získat levý rotor
         public string GetLeftRotor()
         {
             return rl.Layout();

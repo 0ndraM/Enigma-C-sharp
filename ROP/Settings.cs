@@ -132,7 +132,7 @@ namespace ROP
             lblRotorStructure.Text = "";
         }
         
-        //přídámí rotoru do vybraných
+        //přídání rotoru do vybraných
         void BtnSelectClick(object sender, System.EventArgs e)
         {
             if (lstAvailableRotors.SelectedIndex < 0)
