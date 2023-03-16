@@ -161,6 +161,7 @@ namespace ROP
         //výměna reflektoru
         public void SetReflector(string refl)
         {
+            reflector = null; 
             reflector = new Rotor(refl, null, '\0');
             reflector.SetPrevious(rl);
             rl.SetNext(reflector);
@@ -234,4 +235,4 @@ namespace ROP
             return rl.Layout();
         }
     }
-}
+} 
