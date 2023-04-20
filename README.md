@@ -1,4 +1,4 @@
-# Enogma C#
+# Enigma C#
 
 Simulátor šifrovacího stroje Enigma
 
