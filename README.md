@@ -1,4 +1,4 @@
-# ROP
+# Enogma C#
 
 Simulátor šifrovacího stroje Enigma
 
